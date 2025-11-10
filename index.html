@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Builder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body class="bg-gray-900 text-white flex flex-col items-center min-h-screen py-8">
+
+  <header class="text-center mb-8">
+    <h1 class="text-4xl font-bold mb-2">CV Builder</h1>
+    <p class="text-gray-400">Créer ton CV étape par étape</p>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-3/4 bg-gray-700 rounded-full h-4 mb-8">
+    <div id="progress-bar" class="bg-indigo-500 h-4 rounded-full transition-all duration-300" style="width: 0%;"></div>
+  </div>
+
+  <!-- Stepper Container -->
+  <main id="form-container" class="w-3/4 bg-gray-800 p-6 rounded-lg flex flex-col gap-4">
+
+    <!-- Étape 1 - Informations personnelles -->
+    <section class="form-step active flex flex-col gap-4">
+      <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Informations personnelles</h2>
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="text" id="fullName" placeholder="Nom complet" class="input-field flex-1">
+        <input type="email" id="email" placeholder="Email" class="input-field flex-1">
+      </div>
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="tel" id="phone" placeholder="Téléphone" class="input-field flex-1">
+        <input type="text" id="address" placeholder="Adresse" class="input-field flex-1">
+      </div>
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="url" id="linkedin" placeholder="LinkedIn" class="input-field flex-1">
+        <input type="url" id="github" placeholder="GitHub" class="input-field flex-1">
+      </div>
+    </section>
+
+    <!-- Étape 2 - Compétences -->
+    <section class="form-step hidden flex flex-col gap-4">
+      <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Compétences</h2>
+      <div id="skills-container" class="flex flex-col gap-2"></div>
+      <button id="add-skill" class="btn-secondary self-start">+ Ajouter une compétence</button>
+    </section>
+
+    <!-- Étape 3 - Expériences -->
+    <section class="form-step hidden flex flex-col gap-4">
+      <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Expériences professionnelles</h2>
+      <div id="experience-container" class="flex flex-col gap-2"></div>
+      <button id="add-experience" class="btn-secondary self-start">+ Ajouter une expérience</button>
+    </section>
+
+    <!-- Étape 4 - Modèles de CV -->
+    <section class="form-step hidden flex flex-col gap-4">
+      <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Choisissez votre modèle de CV</h2>
+      <div class="flex justify-around">
+        <div class="cv-model bg-gray-700 p-4 rounded-lg flex flex-col items-center cursor-pointer" data-model="1">
+          <img src="assets/img/cv1.png" class="w-20 h-20 rounded-full mb-2" alt="">
+          <p>Modèle 1 (Classique)</p>
+        </div>
+        <div class="cv-model bg-gray-700 p-4 rounded-lg flex flex-col items-center cursor-pointer" data-model="2">
+          <img src="assets/img/cv2.png" class="w-20 h-20 rounded-full mb-2" alt="">
+          <p>Modèle 2 (Moderne)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Étape 5 - Aperçu -->
+    <section class="form-step hidden flex flex-col gap-4">
+      <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Aperçu du CV</h2>
+      <div id="cv-preview" class="bg-gray-700 p-6 rounded-lg min-h-[200px]"></div>
+      <div class="flex gap-4 flex-wrap">
+        <button id="save-cv" class="btn-primary">💾 Sauvegarder</button>
+        <button id="print-cv" class="btn-secondary">🖨️ Imprimer</button>
+        <button id="download-pdf" class="btn-secondary">⬇️ Télécharger PDF</button>
+      </div>
+    </section>
+
+
+
+
+    <!-- Navigation -->
+    <div class="flex justify-between mt-6">
+      <button id="prevBtn" class="btn-secondary hidden">← Précédent</button>
+      <button id="nextBtn" class="btn-primary">Suivant →</button>
+    </div>
+
+  </main>
+
+  <!-- <script src="js/pdfExport.js"></script> -->
+  <!-- <script src="js/storage.js"></script> -->
+  <script src="js/formHandlers.js"></script>
+  <!-- <script src="js/preview.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
