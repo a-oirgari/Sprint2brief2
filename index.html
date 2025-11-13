@@ -48,29 +48,37 @@
       <button id="add-skill" class="btn-secondary self-start">+ Ajouter une compétence</button>
     </section>
 
-    <!-- Étape 3 - Expériences -->
+    <!-- Étape 3- Études -->
+    <section class="form-step hidden flex flex-col gap-4">
+      <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Études / Formations</h2>
+      <div id="education-container" class="flex flex-col gap-2"></div>
+      <button id="add-education" class="btn-secondary self-start">+ Ajouter une formation</button>
+    </section>
+
+
+    <!-- Étape 4 - Expériences -->
     <section class="form-step hidden flex flex-col gap-4">
       <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Expériences professionnelles</h2>
       <div id="experience-container" class="flex flex-col gap-2"></div>
       <button id="add-experience" class="btn-secondary self-start">+ Ajouter une expérience</button>
     </section>
 
-    <!-- Étape 4 - Modèles de CV -->
+    <!-- Étape 5 - Modèles de CV -->
     <section class="form-step hidden flex flex-col gap-4">
       <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Choisissez votre modèle de CV</h2>
       <div class="flex justify-around">
         <div class="cv-model bg-gray-700 p-4 rounded-lg flex flex-col items-center cursor-pointer" data-model="1">
-          <img src="assets/img/cv1.png" class="w-20 h-20 rounded-full mb-2" alt="">
+          <img src="assets/img/cv1.webp" class="w-20 h-20 rounded-full mb-2" alt="">
           <p>Modèle 1 (Classique)</p>
         </div>
         <div class="cv-model bg-gray-700 p-4 rounded-lg flex flex-col items-center cursor-pointer" data-model="2">
-          <img src="assets/img/cv2.png" class="w-20 h-20 rounded-full mb-2" alt="">
+          <img src="assets/img/cv2.webp" class="w-20 h-20 rounded-full mb-2" alt="">
           <p>Modèle 2 (Moderne)</p>
         </div>
       </div>
     </section>
 
-    <!-- Étape 5 - Aperçu -->
+    <!-- Étape 6 - Aperçu -->
     <section class="form-step hidden flex flex-col gap-4">
       <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Aperçu du CV</h2>
       <div id="cv-preview" class="bg-gray-700 p-6 rounded-lg min-h-[200px]"></div>
@@ -92,10 +100,10 @@
 
   </main>
 
-  <!-- <script src="js/pdfExport.js"></script> -->
-  <!-- <script src="js/storage.js"></script> -->
+  <script src="js/pdfExport.js"></script>
+  <script src="js/storage.js"></script>
   <script src="js/formHandlers.js"></script>
-  <!-- <script src="js/preview.js"></script> -->
+  <script src="js/preview.js"></script>
   <script src="js/main.js"></script>
 
 </body>

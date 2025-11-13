@@ -1,6 +1,4 @@
-/* assets/css/styles.css */
 
-/* Champs de saisie */
 .input-field {
   background-color: #374151;
   color: #ffffff;
@@ -14,7 +12,7 @@
   box-shadow: 0 0 0 4px rgba(99,102,241,0.2);
 }
 
-/* Boutons */
+
 .btn-primary {
   background-color: #4f46e5;
   color: #ffffff;
@@ -65,3 +63,19 @@
   border-color: #6366f1;
   box-shadow: 0 0 15px rgba(99,102,241,0.5);
 }
+
+
+/* =========================== */
+/* --- Aperçu du CV --- */
+#cv-preview {
+  background-color: #1f2937;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #f9fafb;
+}
+
+/* Style pour la zone de modèle sélectionné */
+.cv-model.ring-4 {
+  transform: scale(1.05);
+}
+

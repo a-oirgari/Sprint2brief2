@@ -1,7 +1,6 @@
-// Gestion des formulaires dynamiques (ajout/suppression)
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Compétences dynamiques
+  // Compétences 
   const skillsContainer = document.getElementById("skills-container");
   const addSkillBtn = document.getElementById("add-skill");
 
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Expériences dynamiques
+  // Expériences 
   const expContainer = document.getElementById("experience-container");
   const addExpBtn = document.getElementById("add-experience");
 
@@ -42,4 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.parentElement.remove();
     }
   });
+});
+
+// Études 
+const eduContainer = document.getElementById("education-container");
+const addEduBtn = document.getElementById("add-education");
+
+addEduBtn.addEventListener("click", () => {
+  const block = document.createElement("div");
+  block.className = "flex flex-col md:flex-row gap-2";
+  block.innerHTML = `
+    <input type="text" placeholder="Diplôme / Formation" class="input-field flex-1" />
+    <input type="text" placeholder="Établissement" class="input-field flex-1" />
+    <input type="text" placeholder="Années" class="input-field flex-1" />
+    <button class="btn-secondary remove-edu">✖</button>
+  `;
+  eduContainer.appendChild(block);
+});
+
+eduContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("remove-edu")) {
+    e.target.parentElement.remove();
+  }
 });
